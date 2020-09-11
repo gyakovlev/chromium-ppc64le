@@ -18,6 +18,11 @@ wget  -O /etc/portage/repos.conf/chromium-ppc64le.conf https://raw.githubusercon
 curl -Lo /etc/portage/repos.conf/chromium-ppc64le.conf --create-dirs https://raw.githubusercontent.com/gyakovlev/chromium-ppc64le/master/scripts/chromium-ppc64le.conf
 ```
 
+- using layman
+```sh
+layman -o https://raw.githubusercontent.com/gyakovlev/chromium-ppc64le/master/repository.xml -L -a chromium-ppc64le
+```
+
 ### Sync the repo
 
 ```sh

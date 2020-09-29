@@ -5,6 +5,8 @@ based on patches found at https://github.com/chromium-ppc64le/chromium-ppc64le
 
 #### This gentoo overlay contains lightly patched ebuild + patchset to compile and run chromium browser on ppc64le installations of gentoo linux running on Raptor Talos II/Blackbird machines
 
+![building-chromium.png](https://github.com/gyakovlev/chromium-ppc64le/blob/master/metadata/building_chromium.png)
+
 ### Installation
 
 - using wget

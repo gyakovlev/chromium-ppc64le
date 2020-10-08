@@ -1,0 +1,31 @@
+From d6eff56db3b0b8e463bcf1f304506e2e6f7575c6 Mon Sep 17 00:00:00 2001
+From: Georgy Yakovlev <gyakovlev@gentoo.org>
+Date: Thu, 8 Oct 2020 02:53:50 -0700
+Subject: [PATCH] don't minify i18n.js
+
+it fails with
+i18n Bundler: minifying i18n...
+TypeError: child.send is not a function
+    at ChildProcessWorker.initialize
+
+Signed-off-by: Georgy Yakovlev <gyakovlev@gentoo.org>
+---
+ .../src/scripts/localizationV2/bundle_i18n_library.py           | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/third_party/devtools-frontend/src/scripts/localizationV2/bundle_i18n_library.py b/third_party/devtools-frontend/src/scripts/localizationV2/bundle_i18n_library.py
+index f69f52f..faef051 100644
+--- a/third_party/devtools-frontend/src/scripts/localizationV2/bundle_i18n_library.py
++++ b/third_party/devtools-frontend/src/scripts/localizationV2/bundle_i18n_library.py
+@@ -42,7 +42,7 @@ def main():
+     cmd_parts = [
+         _NODE_PATH, _JS_SCRIPT_PATH, '--output_path',
+         os.path.abspath(options.output_path), '--i18n_path',
+-        os.path.abspath(options.i18n_path), '--minify'
++        os.path.abspath(options.i18n_path)
+     ]
+     process = subprocess.Popen(cmd_parts,
+                                stdout=subprocess.PIPE,
+-- 
+2.28.0
+

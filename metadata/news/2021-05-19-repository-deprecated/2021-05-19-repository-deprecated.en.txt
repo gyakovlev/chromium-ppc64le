@@ -1,0 +1,20 @@
+Title: chromium-ppc64le repository is deprecated
+Author: Georgy Yakovlev <gyakovlev@gentoo.org>
+Posted: 2021-05-19
+Revision: 1
+News-Item-Format: 2.0
+
+Starting with version 90.0.4430.212, www-client/chromium
+is available directly in main ::gentoo repository for
+ppc64le platform.
+This repository is deprecated and not going to receive any
+updates.
+
+It is now safe to remove this repository from your system.
+
+If you've followed default installation paths, you will need
+to remove the following:
+ /etc/portage/repos.conf/chromium-ppc64le.conf
+ /var/db/repos/chromium-ppc64le
+
+Next chromium update will come from main gentoo repository.

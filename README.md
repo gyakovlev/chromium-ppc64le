@@ -1,3 +1,8 @@
+# DEPRECATED, chromium is now available from main gentoo repository for ppc64le platform
+
+## DEPRECATED
+
+
 # Chromium ppc64le overlay
 
 based on patches found at https://github.com/chromium-ppc64le/chromium-ppc64le
